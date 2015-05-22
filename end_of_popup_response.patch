@@ -1,0 +1,30 @@
+13,17c13,16
+<     if (config.isCordova) {
+<       var credentialString = JSON.stringify({
+<         credentialToken: credentialToken,
+<         credentialSecret: credentialSecret
+<       });
+---
+>     var credentialString = JSON.stringify({
+>       credentialToken: credentialToken,
+>       credentialSecret: credentialSecret
+>     });
+19,20c18
+<       window.location.hash = credentialString;
+<     }
+---
+>     window.location.hash = credentialString;
+38c36,37
+<     window.close();
+---
+>     
+>     //window.close();
+48c47
+< 
+---
+>  
+51c50
+< </html>
+---
+> </html>
+\ No newline at end of file

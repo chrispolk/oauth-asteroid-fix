@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'chrispolk:oauth-asteroid-fix',
+  name: 'chpolk:oauth-asteroid-fix',
   version: "1.1.5_1",
   // Brief, one-line summary of the package.
   summary: 'Fix for chrome extension to work with asteroid.js',
@@ -11,6 +11,8 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
+  api.versionsFrom('1.1.0.2');
+
   api.use('routepolicy', 'server');
   api.use('webapp', 'server');
   api.use('mongo', 'server');
@@ -50,6 +52,7 @@ Package.onTest(function (api) {
   api.use('service-configuration', 'server');
   api.use('oauth', 'server');
   api.addFiles("oauth_tests.js", 'server');
+  api.use('chpolk:oauth-asteroid-fix', ['client', 'server'])
 });
 
 Cordova.depends({
